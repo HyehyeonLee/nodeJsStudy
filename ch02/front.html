@@ -1,0 +1,38 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    //GET 방식
+    axios.get('https://zerocho.com/api/get')
+        .then((result) => {
+            console.log(result);
+            console.log(result.data); // {}
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    
+    //GET 방식 + async/await 방식
+    (async () => {
+        try{
+            const result = await axios.get('https://zerocho.com/api/get');
+            console.log(result);
+            console.log(result.data); // {}
+        }catch(error){
+            console.error(error);
+        }
+    })();
+
+    //POST 방식
+    (async () => {
+        try {
+            const result = await axios.post('https://zerocho.com/api/post/json', {
+                name : 'zerocho'
+                , birth : 1994
+            });
+            console.log(result);
+            console.log(result.data);
+        } catch (error) {
+            console.error(error);
+        }
+    })();
+
+</script>

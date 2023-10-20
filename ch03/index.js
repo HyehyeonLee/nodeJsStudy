@@ -8,3 +8,6 @@ function checkStringOddOrEven(str){
 
     return even;
 }
+
+console.log(checkNumber(10));
+console.log(checkStringOddOrEven('hello'));
